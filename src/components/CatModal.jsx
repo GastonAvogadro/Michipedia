@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { changeValue } from '../redux/slices/catDataSlice';
+import { changeValue } from '@/redux/slices/catDataSlice';
 
 const CatModal = () => {
     const dispatch = useDispatch();

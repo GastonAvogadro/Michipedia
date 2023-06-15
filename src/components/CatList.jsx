@@ -1,6 +1,6 @@
 import useFetch from '@/hooks/useFetch';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeValue } from '../redux/slices/catDataSlice';
+import { changeValue } from '@/redux/slices/catDataSlice';
 
 const CatList = () => {
     const dispatch = useDispatch();

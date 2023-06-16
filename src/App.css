@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* GENERAL STYLE */
+body{
+    font-family: 'Oxygen', sans-serif;
+}
+
+button{
+    border: none;
+}

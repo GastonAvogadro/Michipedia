@@ -24,7 +24,7 @@ const Pagination = () => {
     return (
         <>
             {search === '' && (
-                <div className="flex justify-center items-center gap-4">
+                <div className="flex justify-center items-center gap-4 p-10">
                     <div
                         className={`flex ${offset < 20 ? 'opacity-20' : 'cursor-pointer'}`}
                         onClick={() => handleOffset('decrement')}

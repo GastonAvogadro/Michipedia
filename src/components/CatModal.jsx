@@ -14,9 +14,9 @@ const CatModal = () => {
             {catData.length !== 0 && (
                 <div
                     onClick={handleData}
-                    className="h-screen w-screen fixed top-0 bg-black opacity-50 flex justify-center items-center"
+                    className="h-screen w-screen fixed top-0 bg-black/70 flex justify-center items-center"
                 >
-                    <div onClick={(e) => e.stopPropagation()} className="w-[500px] h-[500px] bg-white">
+                    <div onClick={(e) => e.stopPropagation()} className="w-[500px] h-[500px] bg-white opacity-100">
                         <p onClick={handleData}>close</p>
                     </div>
                 </div>

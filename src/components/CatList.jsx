@@ -19,9 +19,9 @@ const CatList = () => {
     );
 
     return (
-        <section className="flex justify-center items-center flex-wrap gap-4 mb-10">
+        <section className="flex justify-center flex-wrap gap-4 mb-10 min-h-[80vh]">
             {loading ? (
-                <img src={woolBall} className='animate-spin w-[100px]'/>
+                <img src={woolBall} className="animate-spin w-[100px] self-start mt-6" />
             ) : (
                 data?.map((cat) => {
                     return (

@@ -22,7 +22,9 @@ const CatList = () => {
 
     return (
         <section className="flex justify-center flex-wrap gap-4 mb-10 min-h-[80vh]">
-            {loading ? (
+            {error ? (
+                <div>Ocurrió un error con la conexión 🙀</div>
+            ) : loading ? (
                 <img src={woolBall} className="animate-spin w-[100px] self-start mt-6" />
             ) : data.length !== 0 ? (
                 data.map((cat) => {

@@ -42,7 +42,7 @@ const CatModal = () => {
                         <img
                             src={closeIcon}
                             onClick={handleData}
-                            className="w-[22px] absolute top-5 right-5 cursor-pointer"
+                            className="w-[22px] absolute top-4 right-4 sm:top-5 sm:right-5 cursor-pointer"
                             alt="close"
                         />
                         <div className="w-[300px] h-[300px] sm:w-[450px] sm:h-[450px]">
@@ -53,21 +53,21 @@ const CatModal = () => {
                             />
                         </div>
                         <div className='w-[300px] sm:w-fit ml-6'>
-                            <h3 className="font-bold text-[1.7rem] sm-text-[2rem] mb-2 sm:mb-6">{catData.name}</h3>
+                            <h3 className="font-bold text-[1.4rem] sm-text-[2rem] mb-2 sm:mb-6">{catData.name}</h3>
                             <div>
-                                <p className="text-[1.3rem]">Juguetón</p>
+                                <p className="text-[1rem] sm:text-[1.3rem]">Juguetón</p>
                                 {handlePaws(catData.playfulness)}
                             </div>
                             <div>
-                                <p className="text-[1.3rem]">Familiero</p>
+                                <p className="text-[1rem] sm:text-[1.3rem]">Familiero</p>
                                 {handlePaws(catData.family_friendly)}
                             </div>
                             <div>
-                                <p className="text-[1.3rem]">Cuidado del pelaje</p>
+                                <p className="text-[1rem] sm:text-[1.3rem]">Cuidado del pelaje</p>
                                 {handlePaws(catData.grooming)}
                             </div>
                             <div>
-                                <p className="text-[1.3rem]">Pérdida del pelaje</p>
+                                <p className="text-[1rem] sm:text-[1.3rem]">Pérdida del pelaje</p>
                                 {handlePaws(catData.shedding)}
                             </div>
                         </div>

@@ -8,6 +8,7 @@ const useFetch = (url) => {
 
     useEffect(() => {
         setLoading(true)
+        setError(false)
         const config = {
             headers: { 'X-Api-Key': '9OTnoh5CopkfNWyQTV/6oA==yoCMkcIzlhqsUGNP' },
         };

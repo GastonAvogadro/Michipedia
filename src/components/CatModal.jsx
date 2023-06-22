@@ -52,8 +52,8 @@ const CatModal = () => {
                                 alt={catData.name}
                             />
                         </div>
-                        <div>
-                            <h3 className="font-bold text-[2rem] mb-2 sm:mb-6">{catData.name}</h3>
+                        <div className='w-[300px] sm:w-fit ml-6'>
+                            <h3 className="font-bold text-[1.7rem] sm-text-[2rem] mb-2 sm:mb-6">{catData.name}</h3>
                             <div>
                                 <p className="text-[1.3rem]">Juguetón</p>
                                 {handlePaws(catData.playfulness)}

@@ -4,10 +4,10 @@ import axios from 'axios';
 const useFetch = (url) => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setLoading(true);
+        setLoading(true)
         const config = {
             headers: { 'X-Api-Key': '9OTnoh5CopkfNWyQTV/6oA==yoCMkcIzlhqsUGNP' },
         };

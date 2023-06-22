@@ -26,7 +26,7 @@ const Search = () => {
                 onKeyDown={handleKeyDown}
             />
             <button className="border border-black" onClick={handleSearch}>
-                <img src={searchImg} className="w-[30px]" />
+                <img src={searchImg} className="w-[30px] duration-200 hover:scale-[1.05]" />
             </button>
         </div>
     );

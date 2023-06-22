@@ -1,7 +1,9 @@
 import useFetch from '@/hooks/useFetch';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeValue } from '@/redux/slices/catDataSlice';
+import { motion } from 'framer-motion';
 import woolBall from '@/assets/wool-ball.png';
+import notFound from '@/assets/notFound.svg';
 
 const CatList = () => {
     const dispatch = useDispatch();
@@ -22,23 +24,35 @@ const CatList = () => {
         <section className="flex justify-center flex-wrap gap-4 mb-10 min-h-[80vh]">
             {loading ? (
                 <img src={woolBall} className="animate-spin w-[100px] self-start mt-6" />
-            ) : (
-                data?.map((cat) => {
+            ) : data.length !== 0 ? (
+                data.map((cat) => {
                     return (
-                        <div
+                        <motion.div
                             key={cat.name}
                             onClick={() => handleCatData(cat)}
-                            className="overflow-hidden w-[300px] cursor-pointer"
+                            className="w-[300px] cursor-pointer"
+                            initial={{ y: -30, opacity: 0 }}
+                            animate={{ y: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
                         >
-                            <img
+                            <motion.img
                                 src={cat.image_link}
                                 alt={cat.name}
-                                className="w-[300px] h-[300px] object-cover rounded-[14px]"
+                                className="w-[300px] h-[300px] object-cover rounded-[14px] border-[#ffb152] border-2"
+                                transition={{ duration: 0.2 }}
+                                whileHover={{ scale: 1.02 }}
                             />
                             <p className="font-bold">{cat.name}</p>
-                        </div>
+                        </motion.div>
                     );
                 })
+            ) : (
+                <div>
+                    <p>No hay gatos por acá. ¡Vuelve a intentarlo!</p>
+                    <img src={notFound} alt="cat not found" className="w-[300px]" />
+                </div>
             )}
         </section>
     );
